@@ -1,0 +1,16 @@
+{
+  "name": "tawasul-android-app",
+  "version": "1.0.0",
+  "description": "تطبيق تواصل للاندرويد",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p www && cp ت.html www/index.html 2>/dev/null || cp index.html www/index.html",
+    "cap:sync": "npx cap sync android",
+    "build:apk": "npm run build && npx cap add android && npm run cap:sync && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}
